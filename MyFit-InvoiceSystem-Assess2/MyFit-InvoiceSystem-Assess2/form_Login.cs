@@ -31,9 +31,9 @@ namespace MyFit_InvoiceSystem_Assess2
 
             if (Username == "MyFitness" && Password == "pass")
             {
-                //Switch here to home form
-                //But, for now, here's a messageBox
-                MessageBox.Show("Credentials correct! Welcome!");
+                this.Hide();
+                form_MainMenu SwitchToMain = new form_MainMenu();
+                SwitchToMain.Show();
             }
             else
             { 
