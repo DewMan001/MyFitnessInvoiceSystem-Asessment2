@@ -23,5 +23,12 @@ namespace MyFit_InvoiceSystem_Assess2
             form_Login SwitchToLogin = new form_Login();
             SwitchToLogin.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form_CreateCustomer SwitchToCreateCustomer = new form_CreateCustomer();
+            SwitchToCreateCustomer.Show();
+        }
     }
 }

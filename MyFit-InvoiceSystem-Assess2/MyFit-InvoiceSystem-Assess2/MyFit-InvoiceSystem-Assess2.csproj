@@ -44,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form_CreateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_CreateCustomer.Designer.cs">
+      <DependentUpon>form_CreateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_CreateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_CreateInvoice.Designer.cs">
+      <DependentUpon>form_CreateInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form_CreateCustomer.resx">
+      <DependentUpon>form_CreateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_CreateInvoice.resx">
+      <DependentUpon>form_CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_Login.resx">
       <DependentUpon>form_Login.cs</DependentUpon>
     </EmbeddedResource>
