@@ -17,6 +17,8 @@ namespace MyFit_InvoiceSystem_Assess2
             InitializeComponent();
         }
 
+        int failCount = 0;
+
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
             //declaring username variable

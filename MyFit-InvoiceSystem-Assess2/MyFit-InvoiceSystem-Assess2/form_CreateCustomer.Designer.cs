@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -37,7 +36,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_CusName = new System.Windows.Forms.TextBox();
-            this.txt_CompName = new System.Windows.Forms.TextBox();
             this.txt_PhoneNum = new System.Windows.Forms.TextBox();
             this.txt_Address1 = new System.Windows.Forms.TextBox();
             this.txt_Address2 = new System.Windows.Forms.TextBox();
@@ -51,6 +49,7 @@
             this.btn_StartAgain = new System.Windows.Forms.Button();
             this.txt_Postcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btn_PrintCustomerInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,19 +61,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Name";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Company Name";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 181);
+            this.label3.Location = new System.Drawing.Point(23, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 2;
@@ -83,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 227);
+            this.label4.Location = new System.Drawing.Point(23, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 20);
             this.label4.TabIndex = 3;
@@ -92,7 +82,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 273);
+            this.label5.Location = new System.Drawing.Point(23, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 20);
             this.label5.TabIndex = 4;
@@ -101,7 +91,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 319);
+            this.label6.Location = new System.Drawing.Point(23, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 20);
             this.label6.TabIndex = 5;
@@ -110,7 +100,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 365);
+            this.label7.Location = new System.Drawing.Point(23, 323);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 20);
             this.label7.TabIndex = 6;
@@ -119,7 +109,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 457);
+            this.label8.Location = new System.Drawing.Point(23, 415);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 20);
             this.label8.TabIndex = 7;
@@ -133,44 +123,37 @@
             this.txt_CusName.TabIndex = 2;
             this.txt_CusName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txt_CompName
-            // 
-            this.txt_CompName.Location = new System.Drawing.Point(186, 135);
-            this.txt_CompName.Name = "txt_CompName";
-            this.txt_CompName.Size = new System.Drawing.Size(181, 26);
-            this.txt_CompName.TabIndex = 3;
-            // 
             // txt_PhoneNum
             // 
-            this.txt_PhoneNum.Location = new System.Drawing.Point(186, 181);
+            this.txt_PhoneNum.Location = new System.Drawing.Point(186, 139);
             this.txt_PhoneNum.Name = "txt_PhoneNum";
             this.txt_PhoneNum.Size = new System.Drawing.Size(181, 26);
             this.txt_PhoneNum.TabIndex = 4;
             // 
             // txt_Address1
             // 
-            this.txt_Address1.Location = new System.Drawing.Point(186, 227);
+            this.txt_Address1.Location = new System.Drawing.Point(186, 185);
             this.txt_Address1.Name = "txt_Address1";
             this.txt_Address1.Size = new System.Drawing.Size(181, 26);
             this.txt_Address1.TabIndex = 5;
             // 
             // txt_Address2
             // 
-            this.txt_Address2.Location = new System.Drawing.Point(186, 273);
+            this.txt_Address2.Location = new System.Drawing.Point(186, 231);
             this.txt_Address2.Name = "txt_Address2";
             this.txt_Address2.Size = new System.Drawing.Size(181, 26);
             this.txt_Address2.TabIndex = 6;
             // 
             // txt_Suburb
             // 
-            this.txt_Suburb.Location = new System.Drawing.Point(186, 319);
+            this.txt_Suburb.Location = new System.Drawing.Point(186, 277);
             this.txt_Suburb.Name = "txt_Suburb";
             this.txt_Suburb.Size = new System.Drawing.Size(181, 26);
             this.txt_Suburb.TabIndex = 7;
             // 
             // txt_City
             // 
-            this.txt_City.Location = new System.Drawing.Point(186, 365);
+            this.txt_City.Location = new System.Drawing.Point(186, 323);
             this.txt_City.Name = "txt_City";
             this.txt_City.Size = new System.Drawing.Size(181, 26);
             this.txt_City.TabIndex = 8;
@@ -185,7 +168,7 @@
             "South Australia",
             "Tasmania",
             "Victoria"});
-            this.cboBox_State.Location = new System.Drawing.Point(186, 457);
+            this.cboBox_State.Location = new System.Drawing.Point(186, 415);
             this.cboBox_State.Name = "cboBox_State";
             this.cboBox_State.Size = new System.Drawing.Size(181, 28);
             this.cboBox_State.TabIndex = 10;
@@ -225,10 +208,11 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Save this Customer";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_StartAgain
             // 
-            this.btn_StartAgain.Location = new System.Drawing.Point(482, 96);
+            this.btn_StartAgain.Location = new System.Drawing.Point(482, 100);
             this.btn_StartAgain.Name = "btn_StartAgain";
             this.btn_StartAgain.Size = new System.Drawing.Size(155, 69);
             this.btn_StartAgain.TabIndex = 12;
@@ -238,7 +222,7 @@
             // 
             // txt_Postcode
             // 
-            this.txt_Postcode.Location = new System.Drawing.Point(186, 411);
+            this.txt_Postcode.Location = new System.Drawing.Point(186, 369);
             this.txt_Postcode.Name = "txt_Postcode";
             this.txt_Postcode.Size = new System.Drawing.Size(181, 26);
             this.txt_Postcode.TabIndex = 9;
@@ -246,17 +230,28 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 414);
+            this.label10.Location = new System.Drawing.Point(23, 372);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 20);
             this.label10.TabIndex = 21;
             this.label10.Text = "Postcode";
+            // 
+            // btn_PrintCustomerInfo
+            // 
+            this.btn_PrintCustomerInfo.Location = new System.Drawing.Point(482, 188);
+            this.btn_PrintCustomerInfo.Name = "btn_PrintCustomerInfo";
+            this.btn_PrintCustomerInfo.Size = new System.Drawing.Size(155, 69);
+            this.btn_PrintCustomerInfo.TabIndex = 22;
+            this.btn_PrintCustomerInfo.Text = "Print out customerInfo";
+            this.btn_PrintCustomerInfo.UseVisualStyleBackColor = true;
+            this.btn_PrintCustomerInfo.Click += new System.EventHandler(this.btn_PrintCustomerInfo_Click);
             // 
             // form_CreateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 525);
+            this.Controls.Add(this.btn_PrintCustomerInfo);
             this.Controls.Add(this.txt_Postcode);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_StartAgain);
@@ -270,7 +265,6 @@
             this.Controls.Add(this.txt_Address2);
             this.Controls.Add(this.txt_Address1);
             this.Controls.Add(this.txt_PhoneNum);
-            this.Controls.Add(this.txt_CompName);
             this.Controls.Add(this.txt_CusName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -278,7 +272,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "form_CreateCustomer";
             this.Text = "Create a Customer";
@@ -291,7 +284,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -299,7 +291,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_CusName;
-        private System.Windows.Forms.TextBox txt_CompName;
         private System.Windows.Forms.TextBox txt_PhoneNum;
         private System.Windows.Forms.TextBox txt_Address1;
         private System.Windows.Forms.TextBox txt_Address2;
@@ -313,5 +304,6 @@
         private System.Windows.Forms.Button btn_StartAgain;
         private System.Windows.Forms.TextBox txt_Postcode;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btn_PrintCustomerInfo;
     }
 }

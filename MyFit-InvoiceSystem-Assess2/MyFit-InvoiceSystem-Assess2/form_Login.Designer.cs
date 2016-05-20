@@ -122,6 +122,7 @@
             // 
             // form_Login
             // 
+            this.AcceptButton = this.btn_LogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 317);
@@ -135,6 +136,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "form_Login";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "MyFitness Invoice System";
             this.ResumeLayout(false);
             this.PerformLayout();
