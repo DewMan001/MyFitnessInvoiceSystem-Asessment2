@@ -46,7 +46,32 @@ namespace MyFit_InvoiceSystem_Assess2
                 //grabbing all of the data from the database
                 MySqlDataAdapter pullDown = new MySqlDataAdapter("Select * From `account`", connectionString);
 
-                //
+                //putting the data into the dataset
+                pullDown.Fill(customerLog);
+
+                for (int count = 0; count <= customerLog.Tables[0].Rows.Count - 1; count++)
+                {
+                    this.dataGridView1.Rows.Add
+                    (
+                      customerLog.Tables[0].Rows[count].ItemArray[0].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[1].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[2].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[3].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[4].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[5].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[6].ToString(),
+                      customerLog.Tables[0].Rows[count].ItemArray[7].ToString()
+                    );
+                }
+            }
+
+            catch (MySqlException error)
+            {
+                string errorMsg;
+                errorMsg = "Connection Unsuccessful." + "\n \n";
+                errorMsg += error.Message;
+
+                MessageBox.Show(errorMsg);
             }
         }
     }
