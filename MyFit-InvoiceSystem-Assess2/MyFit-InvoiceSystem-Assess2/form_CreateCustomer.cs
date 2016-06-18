@@ -61,9 +61,10 @@ namespace MyFit_InvoiceSystem_Assess2
             customerInfo.setCustomerSuburb = txt_Suburb.Text;
             customerInfo.setCustomerCity = txt_City.Text;
             customerInfo.setCustomerPostcode = Int32.Parse(txt_Postcode.Text);
+            customerInfo.setCustomerState = cboBox_State.Text;
 
-            //putting the new object into our array
-            customerArray[0] = customerInfo;
+            //sending info up to the database
+            customerInfo.sendToDB(customerInfo);
 
             //clearing out the textboxes
             txt_CusNum.Text = String.Empty;
