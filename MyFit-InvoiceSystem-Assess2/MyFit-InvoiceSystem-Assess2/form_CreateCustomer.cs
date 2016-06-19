@@ -89,21 +89,12 @@ namespace MyFit_InvoiceSystem_Assess2
 
         private void btn_PrintCustomerInfo_Click(object sender, EventArgs e)
         {
-            //Making a new string called outputString
-            string outputString;
-
-            //building outputString as this big, multiline monster
-            outputString = "CUSTOMER ID NUMBER: " + customerArray[0].setCustomerIDNumber + "\n\n";
-            outputString += "CUSTOMER NAME: " + customerArray[0].setCustomerName + "\n\n";
-            outputString += "CUSTOMER PHONE NUMBER: " + customerArray[0].setCustomerPhoneNum + "\n\n";
-            outputString += "CUSTOMER ADDRESS (LINE 1): " + customerArray[0].setCustomerAddress1 + "\n\n";
-            outputString += "CUSTOMER ADDRESS (LINE 2): " + customerArray[0].setCustomerAddress2 + "\n\n";
-            outputString += "CUSTOMER SUBURB: " + customerArray[0].setCustomerSuburb + "\n\n";
-            outputString += "CUSTOMER CITY: " + customerArray[0].setCustomerCity + "\n\n";
-            outputString += "CUSTOMER POSTCODE: " + customerArray[0].setCustomerPostcode + "\n\n";
-
-            //displaying outputString in a messageBox
-            MessageBox.Show(outputString);
+            //creating a new object of the view customers form
+            form_ViewCustomers openForm = new form_ViewCustomers();
+            
+            //opening the form up.
+            openForm.Show();
+            
         }
     }
 }

@@ -31,7 +31,7 @@
             this.btn_MainMenu = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_StartAgain = new System.Windows.Forms.Button();
-            this.btn_PrintCustomerInfo = new System.Windows.Forms.Button();
+            this.btn_ViewCustomers = new System.Windows.Forms.Button();
             this.txt_Postcode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_CusNum = new System.Windows.Forms.TextBox();
@@ -82,15 +82,15 @@
             this.btn_StartAgain.UseVisualStyleBackColor = true;
             this.btn_StartAgain.Click += new System.EventHandler(this.btn_StartAgain_Click);
             // 
-            // btn_PrintCustomerInfo
+            // btn_ViewCustomers
             // 
-            this.btn_PrintCustomerInfo.Location = new System.Drawing.Point(482, 188);
-            this.btn_PrintCustomerInfo.Name = "btn_PrintCustomerInfo";
-            this.btn_PrintCustomerInfo.Size = new System.Drawing.Size(155, 69);
-            this.btn_PrintCustomerInfo.TabIndex = 22;
-            this.btn_PrintCustomerInfo.Text = "Print out customerInfo";
-            this.btn_PrintCustomerInfo.UseVisualStyleBackColor = true;
-            this.btn_PrintCustomerInfo.Click += new System.EventHandler(this.btn_PrintCustomerInfo_Click);
+            this.btn_ViewCustomers.Location = new System.Drawing.Point(482, 188);
+            this.btn_ViewCustomers.Name = "btn_ViewCustomers";
+            this.btn_ViewCustomers.Size = new System.Drawing.Size(155, 69);
+            this.btn_ViewCustomers.TabIndex = 22;
+            this.btn_ViewCustomers.Text = "View Customers";
+            this.btn_ViewCustomers.UseVisualStyleBackColor = true;
+            this.btn_ViewCustomers.Click += new System.EventHandler(this.btn_PrintCustomerInfo_Click);
             // 
             // txt_Postcode
             // 
@@ -268,7 +268,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_PrintCustomerInfo);
+            this.Controls.Add(this.btn_ViewCustomers);
             this.Controls.Add(this.btn_StartAgain);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_MainMenu);
@@ -285,7 +285,7 @@
         private System.Windows.Forms.Button btn_MainMenu;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_StartAgain;
-        private System.Windows.Forms.Button btn_PrintCustomerInfo;
+        private System.Windows.Forms.Button btn_ViewCustomers;
         private System.Windows.Forms.TextBox txt_Postcode;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_CusNum;

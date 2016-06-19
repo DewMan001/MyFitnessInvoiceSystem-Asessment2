@@ -44,7 +44,7 @@ namespace MyFit_InvoiceSystem_Assess2
                 pipeLine.Open();
 
                 //grabbing all of the data from the database
-                MySqlDataAdapter pullDown = new MySqlDataAdapter("Select * From `account`", connectionString);
+                MySqlDataAdapter pullDown = new MySqlDataAdapter("Select * From `customers`", connectionString);
 
                 //putting the data into the dataset
                 pullDown.Fill(customerLog);
