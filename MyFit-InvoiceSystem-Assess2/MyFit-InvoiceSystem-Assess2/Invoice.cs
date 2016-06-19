@@ -39,7 +39,53 @@ namespace MyFit_InvoiceSystem_Assess2
             //running the pipeLine into the application
             MySqlConnection pipeLine = new MySqlConnection(connectionString);
 
+            try
+            {
+              //string to be filled and sent up as a command
+              string messageGoUp;
 
+              //collecting the user's information
+
+              //collecting the id number
+              string cusNum;
+              cusNum = "'" + information.CustomerIDNum + "'";
+
+              //collecting the customer's name
+              string cusName;
+              cusName = "'" + information.CustomerName + "'";
+
+              //collecting the customer's address
+              string cusAddress;
+              cusAddress = "'" + information.CustomerAddress + "'";
+
+              //collecting the product type
+              string prodType;
+              prodType = "'" + information.ProductType + "'";
+
+              //collecting the product quantity
+              string prodQuantity;
+              prodQuantity = "'" + information.ProductQuantity + "'";
+
+              //collecting the product individual cost
+              string prodCostPerItem;
+              prodCostPerItem = "'" + information.ProductCostPerItem + "'";
+
+              //collecting the total cost
+              string prodTotalCost;
+              prodTotalCost = "'" + information.ProductTotalCost + "'";
+              
+              //final message to be sent in as a command  
+              messageGoUp = "INSERT INTO `invoice`(`CusNumber`, `CusName`, `CusAddress`, `ProdType`, `ProdQuantity`, `ProdIndCost`, `ProdOrderCost`) VALUES (" + cusNum + "," + cusName + "," + cusAddress + "," + prodType + "," + prodQuantity + "," + prodCostPerItem + "," + prodTotalCost + ")";
+              
+              //connecting to the server to run the command
+              MySqlConnection commandPlug = new MySqlConnection(connectionString);
+              
+              //sending the command up
+              MySqlCommand saveToDB = new MySqlCommand(messageGoUp, commandPlug);
+              commandPlug.Open();
+              saveToDB.ExecuteNonQuery();
+              commandPlug.Close();
+            }
         }
 
         public int setCustomerIDNum
