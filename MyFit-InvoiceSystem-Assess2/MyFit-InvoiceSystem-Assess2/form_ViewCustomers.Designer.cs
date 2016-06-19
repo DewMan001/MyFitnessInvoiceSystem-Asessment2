@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Refresh = new System.Windows.Forms.Button();
             this.CusNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CusPhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +37,8 @@
             this.CusCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CusPostCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CusState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,25 +59,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(961, 415);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Location = new System.Drawing.Point(827, 455);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(146, 67);
-            this.btn_Close.TabIndex = 1;
-            this.btn_Close.Text = "Close";
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Location = new System.Drawing.Point(652, 455);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(146, 67);
-            this.btn_Refresh.TabIndex = 2;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = true;
             // 
             // CusNum
             // 
@@ -118,6 +99,26 @@
             // 
             this.CusState.HeaderText = "State";
             this.CusState.Name = "CusState";
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Location = new System.Drawing.Point(827, 455);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(146, 67);
+            this.btn_Close.TabIndex = 1;
+            this.btn_Close.Text = "Close";
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Location = new System.Drawing.Point(652, 455);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(146, 67);
+            this.btn_Refresh.TabIndex = 2;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // form_ViewCustomers
             // 

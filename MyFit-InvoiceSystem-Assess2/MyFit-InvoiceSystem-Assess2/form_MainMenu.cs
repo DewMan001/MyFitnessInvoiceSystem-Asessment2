@@ -37,5 +37,17 @@ namespace MyFit_InvoiceSystem_Assess2
             form_CreateInvoice SwitchToCreateInvoice = new form_CreateInvoice();
             SwitchToCreateInvoice.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            form_ViewCustomers SwitchToViewCustomers = new form_ViewCustomers();
+
+            SwitchToViewCustomers.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

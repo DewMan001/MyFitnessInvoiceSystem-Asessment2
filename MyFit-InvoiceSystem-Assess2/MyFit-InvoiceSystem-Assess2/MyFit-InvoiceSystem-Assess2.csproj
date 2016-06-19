@@ -78,6 +78,12 @@
     <Compile Include="form_ViewCustomers.Designer.cs">
       <DependentUpon>form_ViewCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="form_ViewInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ViewInvoices.Designer.cs">
+      <DependentUpon>form_ViewInvoices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_ViewCustomers.resx">
       <DependentUpon>form_ViewCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ViewInvoices.resx">
+      <DependentUpon>form_ViewInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
