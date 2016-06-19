@@ -72,6 +72,58 @@ namespace MyFit_InvoiceSystem_Assess2
 
         }
 
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            //making a new string
+            string connectionString;
+
+            //putting the connection string into it
+            connectionString = "server=223.27.22.124;user id=myFitAdmin;password=FrZ4^HHgQL6pHK8nhcSe;database=041402192_myfitness";
+
+            //making a connection
+            MySqlConnection pipeLine = new MySqlConnection(connectionString);
+
+            //making a new dataset
+            DataSet invoiceLog = new DataSet();
+
+            try
+            {
+                //clearing out the rows in the data grid view
+                this.dataGridView1.Rows.Clear();
+
+                //opening up the connection
+                pipeLine.Open();
+
+                 //pulling down all of the information from the server
+                MySqlDataAdapter pullDown = new MySqlDataAdapter("SELECT * FROM `invoice`", connectionString);
+
+                pullDown.Fill(invoiceLog);
+
+                for (int count = 0; count <= invoiceLog.Tables[0].Rows.Count - 1; count++)
+                {
+                    this.dataGridView1.Rows.Add
+                        (
+                            invoiceLog.Tables[0].Rows[count].ItemArray[0].ToString(),
+                            invoiceLog.Tables[0].Rows[count].ItemArray[1].ToString(),
+                            invoiceLog.Tables[0].Rows[count].ItemArray[2].ToString(),
+                            invoiceLog.Tables[0].Rows[count].ItemArray[3].ToString(),
+                            invoiceLog.Tables[0].Rows[count].ItemArray[4].ToString(),
+                            invoiceLog.Tables[0].Rows[count].ItemArray[5].ToString(),
+                            invoiceLog.Tables[0].Rows[count].ItemArray[6].ToString()
+                        );
+                }
+            }
+
+            catch (MySqlException error)
+            {
+                string errorMsg;
+                errorMsg = "Connection Unsuccessful." + "\n \n";
+                errorMsg += error.Message;
+
+                MessageBox.Show(errorMsg);
+            }
+        }
+
         
     }
 }

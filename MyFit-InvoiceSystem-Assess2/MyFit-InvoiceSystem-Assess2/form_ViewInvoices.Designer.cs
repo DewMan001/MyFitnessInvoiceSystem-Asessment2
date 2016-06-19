@@ -66,6 +66,7 @@
             this.btn_Refresh.TabIndex = 4;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // btn_Close
             // 

@@ -78,18 +78,7 @@ namespace MyFit_InvoiceSystem_Assess2
 
         private void btn_PrintInvoiceArray_Click(object sender, EventArgs e)
         {
-            //string output;
-
-            //output = "CUSTOMER ID: " + invoiceArray[0].setCustomerIDNum + "\n\n";
-            //output += "CUSTOMER NAME: " + invoiceArray[0].setCustomerName + "\n\n";
-            //output += "CUSTOMER ADDRESS: " + invoiceArray[0].setCustomerAddress + "\n\n";
-            //output += "TYPE OF PRODUCT: " + invoiceArray[0].setProductType + "\n\n";
-            //output += "QUANTITY OF PRODUCT: " + invoiceArray[0].setProductQuantity + "\n\n";
-            //output += "COST PER ITEM: " + invoiceArray[0].setProductCostPerItem + "\n\n";
-            //output += "TOTAL COST OF ORDER: " + invoiceArray[0].setProductTotalCost + "\n\n";
-
-            //MessageBox.Show(output);
-
+            
             //creating object of form_ViewInvoices
             form_ViewInvoices openFrom = new form_ViewInvoices();
 
