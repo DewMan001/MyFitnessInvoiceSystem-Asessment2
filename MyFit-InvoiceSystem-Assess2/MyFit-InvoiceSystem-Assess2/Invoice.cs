@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace MyFit_InvoiceSystem_Assess2
 {
@@ -85,6 +86,17 @@ namespace MyFit_InvoiceSystem_Assess2
               commandPlug.Open();
               saveToDB.ExecuteNonQuery();
               commandPlug.Close();
+            }
+
+            catch (MySqlException connectionError)
+            {
+                string errorMessage;
+
+                errorMessage = "Connection Unsuccessful";
+                errorMessage += "\n \n";
+                errorMessage += connectionError.Message;
+
+                MessageBox.Show(errorMessage);
             }
         }
 

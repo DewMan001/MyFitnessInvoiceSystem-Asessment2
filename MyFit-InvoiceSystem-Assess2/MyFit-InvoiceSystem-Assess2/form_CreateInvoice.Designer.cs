@@ -46,7 +46,7 @@
             this.btn_StartAgain = new System.Windows.Forms.Button();
             this.btn_SaveInvoice = new System.Windows.Forms.Button();
             this.btn_MainMenu = new System.Windows.Forms.Button();
-            this.btn_PrintInvoiceArray = new System.Windows.Forms.Button();
+            this.btn_ViewInvoices = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_CusNum
@@ -223,22 +223,22 @@
             this.btn_MainMenu.UseVisualStyleBackColor = true;
             this.btn_MainMenu.Click += new System.EventHandler(this.btn_MainMenu_Click);
             // 
-            // btn_PrintInvoiceArray
+            // btn_ViewInvoices
             // 
-            this.btn_PrintInvoiceArray.Location = new System.Drawing.Point(482, 184);
-            this.btn_PrintInvoiceArray.Name = "btn_PrintInvoiceArray";
-            this.btn_PrintInvoiceArray.Size = new System.Drawing.Size(155, 69);
-            this.btn_PrintInvoiceArray.TabIndex = 48;
-            this.btn_PrintInvoiceArray.Text = "Print out invoiceArray";
-            this.btn_PrintInvoiceArray.UseVisualStyleBackColor = true;
-            this.btn_PrintInvoiceArray.Click += new System.EventHandler(this.btn_PrintInvoiceArray_Click);
+            this.btn_ViewInvoices.Location = new System.Drawing.Point(482, 184);
+            this.btn_ViewInvoices.Name = "btn_ViewInvoices";
+            this.btn_ViewInvoices.Size = new System.Drawing.Size(155, 69);
+            this.btn_ViewInvoices.TabIndex = 48;
+            this.btn_ViewInvoices.Text = "View Invoices";
+            this.btn_ViewInvoices.UseVisualStyleBackColor = true;
+            this.btn_ViewInvoices.Click += new System.EventHandler(this.btn_PrintInvoiceArray_Click);
             // 
             // form_CreateInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 525);
-            this.Controls.Add(this.btn_PrintInvoiceArray);
+            this.Controls.Add(this.btn_ViewInvoices);
             this.Controls.Add(this.btn_StartAgain);
             this.Controls.Add(this.btn_SaveInvoice);
             this.Controls.Add(this.btn_MainMenu);
@@ -284,7 +284,7 @@
         private System.Windows.Forms.Button btn_StartAgain;
         private System.Windows.Forms.Button btn_SaveInvoice;
         private System.Windows.Forms.Button btn_MainMenu;
-        private System.Windows.Forms.Button btn_PrintInvoiceArray;
+        private System.Windows.Forms.Button btn_ViewInvoices;
 
 
     }

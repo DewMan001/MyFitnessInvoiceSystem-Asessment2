@@ -47,7 +47,11 @@ namespace MyFit_InvoiceSystem_Assess2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //creating object of form_ViewInvoices
+            form_ViewInvoices openFrom = new form_ViewInvoices();
 
+            //opening the form
+            openFrom.Show();
         }
     }
 }

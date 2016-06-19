@@ -31,12 +31,27 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
+            this.CusNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CusAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdIndCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdOrderCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CusNumber,
+            this.CusName,
+            this.CusAddress,
+            this.ProdType,
+            this.ProdQuantity,
+            this.ProdIndCost,
+            this.ProdOrderCost});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
@@ -60,6 +75,42 @@
             this.btn_Close.TabIndex = 3;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
+            // CusNumber
+            // 
+            this.CusNumber.HeaderText = "ID Number";
+            this.CusNumber.Name = "CusNumber";
+            // 
+            // CusName
+            // 
+            this.CusName.HeaderText = "Name";
+            this.CusName.Name = "CusName";
+            // 
+            // CusAddress
+            // 
+            this.CusAddress.HeaderText = "Address";
+            this.CusAddress.Name = "CusAddress";
+            // 
+            // ProdType
+            // 
+            this.ProdType.HeaderText = "Product Type";
+            this.ProdType.Name = "ProdType";
+            // 
+            // ProdQuantity
+            // 
+            this.ProdQuantity.HeaderText = "Product Quantity";
+            this.ProdQuantity.Name = "ProdQuantity";
+            // 
+            // ProdIndCost
+            // 
+            this.ProdIndCost.HeaderText = "Cost Per Item";
+            this.ProdIndCost.Name = "ProdIndCost";
+            // 
+            // ProdOrderCost
+            // 
+            this.ProdOrderCost.HeaderText = "Total Cost";
+            this.ProdOrderCost.Name = "ProdOrderCost";
             // 
             // form_ViewInvoices
             // 
@@ -71,6 +122,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "form_ViewInvoices";
             this.Text = "form_ViewInvoices";
+            this.Load += new System.EventHandler(this.form_ViewInvoices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -81,5 +133,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdIndCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdOrderCost;
     }
 }
