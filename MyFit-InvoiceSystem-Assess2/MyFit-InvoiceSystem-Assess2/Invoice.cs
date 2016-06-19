@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace MyFit_InvoiceSystem_Assess2
 {
@@ -25,6 +26,20 @@ namespace MyFit_InvoiceSystem_Assess2
             ProductQuantity = 0;
             ProductCostPerItem = 0;
             ProductTotalCost = 0;
+        }
+
+        public void sendToDB(Invoice information)
+        {
+            //making a string variable
+            string connectionString;
+
+            //putting the connection string into that string variable
+            connectionString = "server=223.27.22.124;user id=myFitAdmin;password=FrZ4^HHgQL6pHK8nhcSe;database=041402192_myfitness";
+
+            //running the pipeLine into the application
+            MySqlConnection pipeLine = new MySqlConnection(connectionString);
+
+
         }
 
         public int setCustomerIDNum
